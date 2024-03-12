@@ -8,13 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+      colors: {
+        //sunshine: '#fbfcdb',
+        //dusk: '#e9defa',
+        //sunshine: '#fddb92',
+        //dusk: '#d1fdff',
+        sunshine: '#fdfcfb',
+        dusk: '#e2d1c3',
+      }
     },
   },
   plugins: [],
 };
 export default config;
+
+//background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+
+// background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
