@@ -8,6 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'body': ['Monospace'],
+      },
+      animation: {
+        // Bounces 5 times 1s equals 5 seconds
+        'bounce-short': 'bounce 1s ease-in-out 3'
+      },
       colors: {
         //sunshine: '#fbfcdb',
         //dusk: '#e9defa',
@@ -16,7 +23,7 @@ const config: Config = {
         sunshine: '#fdfcfb',
         dusk: '#e2d1c3',
       }
-    },
+    }
   },
   plugins: [],
 };
