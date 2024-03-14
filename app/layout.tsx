@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Hi, I'm Gareth.",
+  title: "Gareth MacLeod",
   description: "This is my personal website",
 };
 
@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="icon" type="image/png" href="/monospace_g_cropped.png" />
+      <link rel="icon" type="image/png" href="/favicon.ico" />
       <body>{children}</body>
     </html>
   );
