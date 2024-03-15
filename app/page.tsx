@@ -1,4 +1,4 @@
-import AltTimeline from "./sections/alt_timeline";
+import CareerTimeline from "./sections/timeline";
 import Writing from "./sections/writing";
 import Hero from "./sections/hero_center";
 import Footer from "./sections/basic_footer";
@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <main className="divide-y-2 relative space-y-10">
         <Hero />
-        <AltTimeline />
+        <CareerTimeline />
         <Writing />
         <ConclusionLeftRight />
       </main>
