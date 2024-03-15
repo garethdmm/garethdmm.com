@@ -1,8 +1,8 @@
-import CareerTimeline from "./sections/timeline";
 import AltTimeline from "./sections/alt_timeline";
-import Conclusion from "./sections/conclusion";
 import Writing from "./sections/writing";
 import Hero from "./sections/hero_center";
+import Footer from "./sections/basic_footer";
+import ConclusionLeftRight from "./sections/conclusion_left_right";
 
 export default function Home() {
   return (
@@ -11,9 +11,9 @@ export default function Home() {
         <Hero />
         <AltTimeline />
         <Writing />
-        <Conclusion />
+        <ConclusionLeftRight />
       </main>
-      <footer className="py-2 px-4 text-sm">© 2024 Gareth Macleod</footer>
+      <Footer />
     </>
   );
 }

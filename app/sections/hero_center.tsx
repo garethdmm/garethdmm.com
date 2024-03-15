@@ -13,7 +13,7 @@ export default function Hero() {
         I&apos;m an engineer and founder with deep experience growing startups.
       </p>
       <p className="mt-6 mb-6 text-lg leading-8 text-gray-600 text-center max-w-xl mx-auto">
-        I&aposve built core security services at{" "}
+        I&apos;ve built core security services at{" "}
         <span className="bg-cyan-500 text-white cursor-pointer px-0.5">
           Meta
         </span>
