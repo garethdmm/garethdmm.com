@@ -21,8 +21,8 @@ export default function Hero() {
         <span className="bg-orange-500 text-white cursor-pointer px-0.5">
           Tinker
         </span>
-        , to $1m in daily GMV, and helped many others grow their own companies
-        as a fractional CTO.
+        , to profitability and over 1$ billion GMV. I&apos;ve also helped many
+        others grow their own companies as a fractional CTO.
       </p>
       <p className="mt-6 mb-6 text-lg leading-8 text-gray-600 text-center max-w-xl mx-auto">
         If you&apos;re interested in working together, you can{" "}

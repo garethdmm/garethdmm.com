@@ -13,11 +13,6 @@ export default function RootLayout({
 }>) {
   return (
     <html className="" lang="en">
-      <script
-        type="text/javascript"
-        src="https://assets.calendly.com/assets/external/widget.js"
-        async
-      ></script>
       <link rel="icon" type="image/png" href="/favicon.ico" />
       <body>{children}</body>
     </html>
