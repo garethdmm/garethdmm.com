@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="" lang="en">
+    <html lang="en">
       <link rel="icon" type="image/png" href="/favicon.ico" />
       <body>{children}</body>
     </html>
