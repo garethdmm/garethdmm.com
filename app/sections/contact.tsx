@@ -1,6 +1,6 @@
 import Script from "next/script";
 
-export default async function ConclusionLeftRight() {
+export default async function Contact() {
   return (
     <div className="relative isolate bg-white">
       <Script

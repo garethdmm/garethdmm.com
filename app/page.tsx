@@ -1,17 +1,17 @@
-import CareerTimeline from "./sections/timeline";
+import Career from "./sections/career";
 import Writing from "./sections/writing";
-import Hero from "./sections/hero_center";
+import Cover from "./sections/cover";
 import Footer from "./sections/basic_footer";
-import ConclusionLeftRight from "./sections/conclusion_left_right";
+import Contact from "./sections/contact";
 
 export default function Home() {
   return (
     <>
       <main className="divide-y-2 relative space-y-10">
-        <Hero />
-        <CareerTimeline />
+        <Cover />
+        <Career />
         <Writing />
-        <ConclusionLeftRight />
+        <Contact />
       </main>
       <Footer />
     </>

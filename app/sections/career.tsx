@@ -112,7 +112,7 @@ const data = [
   },
 ];
 
-export default function CareerTimeline() {
+export default function Career() {
   return (
     <div className="py-16">
       <div className="text-center mb-16">

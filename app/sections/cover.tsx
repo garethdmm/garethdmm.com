@@ -1,6 +1,6 @@
 import { FaArrowDown } from "react-icons/fa6";
 
-export default function Hero() {
+export default function Cover() {
   return (
     <div className="relative container mx-auto isolate py-32">
       <div className="flex flex-row space-x-8 items-center justify-center">
