@@ -39,7 +39,7 @@ export default function Experience({
         {description}
       </p>
       {stack && (
-        <div className="flex flex-wrap gap-x-2 gap-y-3 mt-4">
+        <div className="flex flex-wrap gap-x-2 gap-y-3 mt-4 line-clamp-2">
           {stack.map((tech) => (
             <span
               key="1"

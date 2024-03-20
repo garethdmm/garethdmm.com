@@ -116,9 +116,9 @@ const data = [
 export default function Career() {
   return (
     <div className="py-16">
-      <div className="container mx-auto px-16">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left mb-16">
-          Here are some things I&apos;ve done
+      <div className="container mx-auto px-6 sm:px-12">
+        <h2 className="text-3xl sm:text-4xl px-6 sm:px-0 font-bold tracking-tight text-gray-900 text-left mb-6 sm:mb-16">
+          Here is some of the work I&apos;ve done in the past.
         </h2>
         <VerticalTimeline lineColor="#e2e8f0">
           {data.map((experience) => (
