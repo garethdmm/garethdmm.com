@@ -1,4 +1,5 @@
 import Collapse from "./Collapse";
+import { ReactNode } from "react";
 
 type ExperienceType = {
   id?: string;
@@ -7,7 +8,7 @@ type ExperienceType = {
   left: boolean;
   description: string;
   time: string;
-  details?: string[];
+  details?: ReactNode[];
   stack?: string[];
   key: number;
 };
@@ -34,10 +35,12 @@ export default function Experience({
       <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         {role}
       </h5>
-      <h4 className="text-base text-gray-600 mb-3">{place}</h4>
-      <p className="font-normal text-gray-700 dark:text-gray-400">
-        {description}
-      </p>
+      <h4 className="text-base text-gray-600">{place}</h4>
+      {description && (
+        <p className="font-normal text-gray-700 dark:text-gray-400 mt-3">
+          {description}
+        </p>
+      )}
       {stack && (
         <div className="flex flex-wrap gap-x-2 gap-y-3 mt-4 line-clamp-2">
           {stack.map((tech) => (

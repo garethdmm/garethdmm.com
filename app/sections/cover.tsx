@@ -19,22 +19,23 @@ export default function Cover() {
           startups.
         </p>
         <p className="mt-6 mb-6 text-lg leading-8 text-gray-600 max-w-xl mx-auto">
-          I built my own startup, Tinker, to profitability and over a billion
-          dollars in volume, and helped many others grow their own companies in
-          early stages as a Fractional CTO.
+          I built my own startup, Tinker, to profitability and a billion dollars
+          in volume, and have helped many others grow their companies as a lead
+          or fractional CTO.
         </p>
         <p className="mt-6 mb-6 text-lg leading-8 text-gray-600 max-w-xl mx-auto">
-          If you&apos;re interested in working together, you can{" "}
+          If you&apos;d like to work with me, let&apos;s{" "}
           <a
             href="#contact"
             className="bg-blue-500 px-0.5 text-white cursor-pointer"
           >
             connect
           </a>{" "}
-          with me at the links below, or scroll to learn more about me. You can
+          at the links below, or you can scroll to learn more about me. You can
           also{" "}
           <a
             href="https://garethdmm.medium.com/"
+            target="_blank"
             className="bg-indigo-500 text-white cursor-pointer px-0.5"
           >
             read
