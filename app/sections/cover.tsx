@@ -34,7 +34,7 @@ export default function Cover() {
           with me at the links below, or scroll to learn more about me. You can
           also{" "}
           <a
-            href="https://garethdmm.com/"
+            href="https://garethdmm.medium.com/"
             className="bg-indigo-500 text-white cursor-pointer px-0.5"
           >
             read
