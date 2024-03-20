@@ -27,7 +27,7 @@ export default function Writing() {
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-16 text-center">
           Here&apos;s some of my writing.
         </h2>
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-20 lg:mx-0">
           {posts.map((post) => (
             <article key={post.id} className="flex flex-col items-start">
               <div className="relative w-full">
