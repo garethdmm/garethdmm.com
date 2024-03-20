@@ -2,9 +2,9 @@ const navigation = [
   {
     name: "GitHub",
     href: "#",
-    icon: (props) => (
+    icon: (props: any) => (
       <svg
-        class="w-5 h-5 fill-current"
+        className="w-5 h-5 fill-current"
         role="img"
         viewBox="0 0 256 256"
         xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +18,7 @@ const navigation = [
   {
     name: "GitHub",
     href: "#",
-    icon: (props) => (
+    icon: (props: any) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
           fillRule="evenodd"
