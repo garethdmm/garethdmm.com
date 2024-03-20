@@ -59,6 +59,7 @@ const data = [
     ],
   },
   {
+    id: "tinker",
     key: 3,
     left: true,
     place: "Tinker",
@@ -115,33 +116,32 @@ const data = [
 export default function Career() {
   return (
     <div className="py-16">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl tracking-tight text-gray-900 text-center mb-1">
-          My Career
+      <div className="container mx-auto px-16">
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left mb-16">
+          Here are some things I&apos;ve done
         </h2>
-        <p className="text-gray-600 text-center">(so far)</p>
+        <VerticalTimeline lineColor="#e2e8f0">
+          {data.map((experience) => (
+            <VerticalTimelineElement
+              key={experience.key}
+              className="vertical-timeline-element--work"
+              date={experience.time}
+              contentArrowStyle={{ display: "none" }}
+              contentStyle={{ background: "transparent", boxShadow: "none" }}
+              iconStyle={{
+                color: "#fff",
+                background: "#fff",
+                boxShadow: "none",
+                WebkitBoxShadow: "none",
+                ...experience.iconStyle,
+              }}
+              icon={experience.icon}
+            >
+              <Experience {...experience} />
+            </VerticalTimelineElement>
+          ))}
+        </VerticalTimeline>
       </div>
-      <VerticalTimeline lineColor="#e2e8f0">
-        {data.map((experience) => (
-          <VerticalTimelineElement
-            key={experience.key}
-            className="vertical-timeline-element--work"
-            date={experience.time}
-            contentArrowStyle={{ display: "none" }}
-            contentStyle={{ background: "transparent", boxShadow: "none" }}
-            iconStyle={{
-              color: "#fff",
-              background: "#fff",
-              boxShadow: "none",
-              WebkitBoxShadow: "none",
-              ...experience.iconStyle,
-            }}
-            icon={experience.icon}
-          >
-            <Experience {...experience} />
-          </VerticalTimelineElement>
-        ))}
-      </VerticalTimeline>
     </div>
   );
 }

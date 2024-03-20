@@ -1,6 +1,7 @@
 import Collapse from "./Collapse";
 
 type ExperienceType = {
+  id?: string;
   place: string;
   role: string;
   left: boolean;
@@ -19,10 +20,12 @@ export default function Experience({
   description,
   details,
   stack,
+  id,
   ...props
 }: ExperienceType) {
   return (
     <div
+      id={id || ""}
       key={key}
       className={`${
         left ? "ml-auto mr-0" : null
