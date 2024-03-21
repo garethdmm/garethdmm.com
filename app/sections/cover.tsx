@@ -2,7 +2,7 @@ import { FaArrowDown } from "react-icons/fa6";
 
 export default function Cover() {
   return (
-    <div className="relative isolate py-24 sm:py-32">
+    <div className="relative isolate py-12 sm:py-32">
       <div className="container mx-auto px-12 lg:px-8 text-left sm:text-center">
         <div className="flex flex-row space-y-4 items-center justify-center space-x-4">
           <img
