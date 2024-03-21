@@ -98,7 +98,6 @@ const data = [
       "My team and I built a bunch of product ideas that didn't work, but we learned a ton along the way.",
     stack: ["Python", "Bootstrap", "Javascript"],
     icon: <img alt="Matinee" src="/matinee.png" />,
-    details: null,
   },
   {
     key: 5,
@@ -117,7 +116,6 @@ const data = [
     place: "University of Waterloo",
     time: "2006 - 11",
     role: "Bachelor of Computer Science",
-    description: null,
     icon: <img alt="University of Waterloo" src="/waterloo.png" />,
   },
 ];

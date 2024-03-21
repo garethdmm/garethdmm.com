@@ -6,7 +6,7 @@ type ExperienceType = {
   place: string;
   role: string;
   left: boolean;
-  description: string;
+  description?: string;
   time: string;
   details?: ReactNode[];
   stack?: string[];
@@ -22,7 +22,6 @@ export default function Experience({
   details,
   stack,
   id,
-  ...props
 }: ExperienceType) {
   return (
     <div
