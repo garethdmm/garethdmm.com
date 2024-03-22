@@ -2,7 +2,10 @@ import { FaArrowDown } from "react-icons/fa6";
 
 export default function Cover() {
   return (
-    <div className="relative isolate py-6 sm:py-32 iphonepromax:py-16">
+    <div
+      id="cover"
+      className="relative isolate py-6 sm:py-32 iphonepromax:pt-16"
+    >
       <div className="container mx-auto px-12 lg:px-8 text-left sm:text-center">
         <div className="flex flex-row space-y-4 items-center justify-center space-x-4">
           <img
@@ -23,7 +26,7 @@ export default function Cover() {
           in volume, and have helped many others grow their companies as a lead
           or fractional CTO.
         </p>
-        <p className="mt-6 mb-6 text-lg leading-8 text-gray-600 max-w-xl mx-auto">
+        <p className="mt-6 mb-6 sm:mb-16 iphonepromax:mb-16 text-lg leading-8 text-gray-600 max-w-xl mx-auto">
           If you&apos;d like to work with me, let&apos;s{" "}
           <a
             href="#contact"
@@ -42,11 +45,11 @@ export default function Cover() {
           </a>{" "}
           some of my writing.
         </p>
-      </div>
-      <div className="mx-auto p-2 w-10 h-10 ring-1 rounded-full ring-slate-500 shadow-xl bg-amber-50 text-gray-900 animate-bounce-short">
-        <a href="#career">
-          <FaArrowDown className="size-6" />
-        </a>
+        <div className="mx-auto p-2 w-10 h-10 ring-1 rounded-full ring-slate-500 shadow-xl bg-amber-50 text-gray-900 animate-bounce-short">
+          <a href="#career">
+            <FaArrowDown className="size-6" />
+          </a>
+        </div>
       </div>
     </div>
   );

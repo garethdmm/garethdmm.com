@@ -22,7 +22,7 @@ const posts = [
 
 export default function Writing() {
   return (
-    <div className="relative py-16 sm:py-24">
+    <div id="writing" className="relative py-6 sm:py-24 iphonepromax:py-8">
       <div className="container mx-auto px-12 sm:px-6 lg:px-8 flex flex-col items-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-16 text-center">
           Here&apos;s some of my writing.
