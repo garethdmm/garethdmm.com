@@ -22,6 +22,9 @@ const config: Config = {
         //dusk: '#d1fdff',
         sunshine: '#fdfcfb',
         dusk: '#e2d1c3',
+      },
+      screens: {
+        'iphonepromax': { 'raw': '(min-height: 739px) and (max-width:640px)'},
       }
     }
   },

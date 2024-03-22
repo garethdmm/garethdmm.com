@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-amber-50">
+    <html lang="en" className="bg-amber-50 scroll-smooth">
       <link rel="icon" type="image/png" href="/favicon.ico" />
       <body>{children}</body>
     </html>

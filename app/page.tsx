@@ -7,7 +7,7 @@ import Contact from "./sections/contact";
 export default function Home() {
   return (
     <>
-      <main className="divide-y-2 relative">
+      <main className="divide-y-0 relative">
         <Cover />
         <Career />
         <Writing />
