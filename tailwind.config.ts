@@ -9,28 +9,26 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        'body': ['Monospace'],
+        body: ["Monospace"],
       },
       animation: {
         // Bounces 5 times 1s equals 5 seconds
-        'bounce-short': 'bounce 1s ease-in-out 3 forwards',
+        "bounce-short": "bounce 1s ease-in-out 3 forwards",
       },
       colors: {
         //sunshine: '#fbfcdb',
         //dusk: '#e9defa',
         //sunshine: '#fddb92',
         //dusk: '#d1fdff',
-        sunshine: '#fdfcfb',
-        dusk: '#e2d1c3',
+        sunshine: "#fdfcfb",
+        dusk: "#e2d1c3",
       },
       screens: {
-        'iphonepromax': { 'raw': '(min-height: 739px) and (max-width:640px)'},
-      }
-    }
+        iphonepromax: { raw: "(min-height: 739px) and (max-width:640px)" },
+      },
+    },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-  ],
+  plugins: [require("@tailwindcss/forms")],
 };
 export default config;
 

@@ -23,11 +23,11 @@ const posts = [
 export default function Writing() {
   return (
     <div id="writing" className="relative py-6 sm:py-24 iphonepromax:py-8">
-      <div className="container mx-auto px-12 sm:px-6 lg:px-8 flex flex-col items-center">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-16 text-center">
+      <div className="container mx-auto flex flex-col items-center px-12 sm:px-6 lg:px-8">
+        <h2 className="mb-16 text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Here&apos;s some of my writing.
         </h2>
-        <div className="mx-auto grid max-w-2xl grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-20 lg:mx-0">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 sm:grid-cols-2 lg:mx-0">
           {posts.map((post) => (
             <article key={post.id} className="flex flex-col items-start">
               <div className="relative w-full">

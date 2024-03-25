@@ -9,7 +9,7 @@ export default function Collapse({ children }: CollapseType) {
     <>
       <details className="mt-8">
         <summary>
-          <span className="text-md font-semibold text-gray-900 ml-2">
+          <span className="text-md ml-2 font-semibold text-gray-900">
             Read more
           </span>
         </summary>

@@ -4,7 +4,7 @@ const navigation = [
     href: "#",
     icon: (props: any) => (
       <svg
-        className="w-5 h-5 fill-current"
+        className="h-5 w-5 fill-current"
         role="img"
         viewBox="0 0 256 256"
         xmlns="http://www.w3.org/2000/svg"

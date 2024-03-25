@@ -75,7 +75,7 @@ const data = [
         transaction volume in only 8 months. Parts of this codebase are now{" "}
         <a
           href="https://github.com/garethdmm/gryphon"
-          className="bg-slate-700 text-white px-0.5"
+          className="bg-slate-700 px-0.5 text-white"
         >
           public on github
         </a>
@@ -124,7 +124,7 @@ export default function Career() {
   return (
     <div id="career" className="py-6 sm:pb-16 iphonepromax:py-8">
       <div className="container mx-auto px-6 sm:px-12">
-        <h2 className="text-3xl sm:text-4xl px-6 sm:px-0 font-bold tracking-tight text-gray-900 text-left mb-6 sm:mb-16">
+        <h2 className="mb-6 px-6 text-left text-3xl font-bold tracking-tight text-gray-900 sm:mb-16 sm:px-0 sm:text-4xl">
           Here&apos;s some of the work I&apos;ve done in the past.
         </h2>
         <VerticalTimeline lineColor="#e2e8f0">

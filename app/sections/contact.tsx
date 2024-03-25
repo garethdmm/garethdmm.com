@@ -11,13 +11,13 @@ export default async function Contact() {
         src="https://assets.calendly.com/assets/external/widget.js"
         async
       ></Script>
-      <div className="container px-6 lg:px-8 mx-auto grid grid-cols-1 sm:grid-cols-2">
-        <div className="relative px-6 pb-12 pt-16 sm:pt-32 iphonepromax:pt-0 lg:static lg:px-8 lg:py-48">
+      <div className="container mx-auto grid grid-cols-1 px-6 sm:grid-cols-2 lg:px-8">
+        <div className="relative px-6 pb-12 pt-16 sm:pt-32 lg:static lg:px-8 lg:py-48 iphonepromax:pt-0">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-left">
+            <h2 className="text-left text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               And here&apos;s where to find me.
             </h2>
-            <p className="mt-6 iphonepromax:mt-16 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-gray-600 iphonepromax:mt-16">
               I am occasionally available for fractional or full-time roles.
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -28,7 +28,7 @@ export default async function Contact() {
               You can also find me at{" "}
               <a
                 href="https://www.linkedin.com/in/garethmacleod/"
-                className="bg-cyan-500 text-white px-0.5 cursor-pointer"
+                className="cursor-pointer bg-cyan-500 px-0.5 text-white"
                 target="_blank"
               >
                 linkedin
@@ -36,14 +36,14 @@ export default async function Contact() {
               ,{" "}
               <a
                 href="https://github.com/garethdmm"
-                className="bg-slate-500 text-white px-0.5 cursor-pointer"
+                className="cursor-pointer bg-slate-500 px-0.5 text-white"
                 target="_blank"
               >
                 github
               </a>
               , or send me an{" "}
               <a
-                className="bg-red-600 text-white px-0.5"
+                className="bg-red-600 px-0.5 text-white"
                 href="mailto:gareth.macleod@gmail.com"
                 target="_blank"
               >
