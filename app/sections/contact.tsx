@@ -56,7 +56,8 @@ export default async function Contact() {
           style={{ minWidth: "320px", height: "750px" }}
         ></div>
         <div
-          className="calendly-inline-widget lg:hidden"
+          className="calendly-inline-widget rounded-lg
+          border-[1px] border-[#1a1a1a1a] bg-white p-[2px] shadow md:rounded-none md:border-none md:bg-transparent md:p-0 md:shadow-none lg:hidden"
           data-url="https://calendly.com/gareth-macleod/30min?hide_event_type_details=1&hide_gdpr_banner=1"
           style={{ minWidth: "320px", height: "750px" }}
         ></div>
