@@ -34,16 +34,23 @@ export default function Cover() {
           >
             connect
           </a>{" "}
-          at the links below, or you can scroll to learn more about me. You can
-          also{" "}
+          at the links below, or{" "}
           <a
             href="https://garethdmm.medium.com/"
             target="_blank"
-            className="cursor-pointer bg-indigo-500 px-0.5 text-white"
+            className="cursor-pointer bg-cyan-500 px-0.5 text-white"
           >
-            read
+            scroll
           </a>{" "}
-          some of my writing.
+          to learn more about me. You can also read some of my{" "}
+          <a
+            href="https://garethdmm.medium.com/"
+            target="_blank"
+            className="cursor-pointer bg-pink-500 px-0.5 text-white"
+          >
+            writing
+          </a>
+          .
         </p>
         <div className="mx-auto h-10 w-10 animate-bounce-short rounded-full bg-amber-50 p-2 text-gray-900 shadow-xl ring-1 ring-slate-500">
           <a href="#career">
