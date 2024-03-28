@@ -11,7 +11,7 @@ export default async function Contact() {
         src="https://assets.calendly.com/assets/external/widget.js"
         async
       ></Script>
-      <div className="container mx-auto mb-12 md:mb-0">
+      <div className="container mx-auto mb-12 max-w-7xl md:mb-0">
         <div className="max-w-xl px-12">
           <h2 className="text-left text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             And here&apos;s where to find me.
