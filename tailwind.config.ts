@@ -16,12 +16,7 @@ const config: Config = {
         "bounce-short": "bounce 1s ease-in-out 3 forwards",
       },
       colors: {
-        //sunshine: '#fbfcdb',
-        //dusk: '#e9defa',
-        //sunshine: '#fddb92',
-        //dusk: '#d1fdff',
-        sunshine: "#fdfcfb",
-        dusk: "#e2d1c3",
+        beach: "#dfcc98",
       },
       screens: {
         iphonepromax: { raw: "(min-height: 739px) and (max-width:640px)" },

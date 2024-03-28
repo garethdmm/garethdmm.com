@@ -32,14 +32,14 @@ const navigation = [
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="mx-auto px-6 py-3 sm:py-6">
+    <footer className="bg-beach">
+      <div className="mx-auto px-6 py-8 sm:py-12">
         <div className="flex justify-center space-x-6">
           {navigation.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-gray-400 hover:text-gray-500"
+              className="text-gray-600 hover:text-gray-600"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -47,7 +47,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="mt-2">
-          <p className="text-center text-xs leading-5 text-gray-500">
+          <p className="text-center text-xs leading-5 text-gray-600">
             &copy; 2024 Gareth MacLeod
           </p>
         </div>
