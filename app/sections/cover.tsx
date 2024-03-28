@@ -36,8 +36,7 @@ export default function Cover() {
           </a>{" "}
           at the links below, or{" "}
           <a
-            href="https://garethdmm.medium.com/"
-            target="_blank"
+            href="#career"
             className="cursor-pointer bg-cyan-500 px-0.5 text-white"
           >
             scroll
