@@ -4,7 +4,7 @@ export default async function Contact() {
   return (
     <div
       id="contact"
-      className="relative isolate pb-12 pt-6 sm:pt-24 md:pb-0 lg:pb-12 iphonepromax:pt-12"
+      className="relative isolate pb-24 pt-6 sm:pt-24 iphonepromax:pt-12"
     >
       <Script
         type="text/javascript"
