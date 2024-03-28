@@ -26,7 +26,3 @@ const config: Config = {
   plugins: [require("@tailwindcss/forms")],
 };
 export default config;
-
-//background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
-
-// background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
