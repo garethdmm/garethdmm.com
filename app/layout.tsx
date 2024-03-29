@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,6 +17,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth bg-amber-50">
       <link rel="icon" type="image/png" href="/favicon.ico" />
       <body>{children}</body>
+      <GoogleAnalytics gaId="G-LDRSXQJLG0" />
     </html>
   );
 }
