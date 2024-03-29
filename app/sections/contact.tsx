@@ -4,14 +4,14 @@ export default async function Contact() {
   return (
     <div
       id="contact"
-      className="relative isolate pb-12 pt-6 sm:pt-24 md:pb-0 lg:pb-12 iphonepromax:pt-12"
+      className="relative isolate pb-24 pt-6 sm:pt-24 iphonepromax:pt-12"
     >
       <Script
         type="text/javascript"
         src="https://assets.calendly.com/assets/external/widget.js"
         async
       ></Script>
-      <div className="container mx-auto mb-12 md:mb-0">
+      <div className="container mx-auto mb-12 max-w-7xl md:mb-0">
         <div className="max-w-xl px-12">
           <h2 className="text-left text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             And here&apos;s where to find me.

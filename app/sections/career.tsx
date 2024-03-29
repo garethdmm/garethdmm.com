@@ -124,9 +124,11 @@ export default function Career() {
   return (
     <div id="career" className="py-6 sm:pb-16 iphonepromax:py-8">
       <div className="container mx-auto px-6 sm:px-12">
-        <h2 className="mb-6 px-6 text-left text-3xl font-bold tracking-tight text-gray-900 sm:mb-16 sm:px-0 sm:text-4xl">
-          Here&apos;s some of the work I&apos;ve done in the past.
-        </h2>
+        <div className="mx-auto max-w-7xl">
+          <h2 className="mb-6 px-6 text-left text-3xl font-bold tracking-tight text-gray-900 sm:mb-16 sm:px-0 sm:text-4xl">
+            Here&apos;s some of the work I&apos;ve done in the past.
+          </h2>
+        </div>
         <VerticalTimeline lineColor="#e2e8f0">
           {data.map((experience) => (
             <VerticalTimelineElement
