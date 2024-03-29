@@ -49,7 +49,7 @@ const data = [
     time: "2020 - 22",
     stack: ["React", "Django", "Material UI", "GraphQL"],
     description:
-      "Lead the effort to re-build the company's struggling payments workflows. The solutions I found unlocked 4x growth over three quarters and the company's series B.",
+      "Led the effort to re-build the company's struggling payments workflows. The solutions I found unlocked 4x growth over three quarters and the company's series B.",
     details: [
       "Took ownership of the AR/AP workflow problem, which was known to be blocking growth, but poorly defined as it crossed team boundaries",
       "Built relationships and trust with each team through empathy and responsiveness, learned their challenges through user interviews and observation.",
@@ -66,7 +66,7 @@ const data = [
     role: "CEO/Engineer",
     time: "2014 - 19",
     description:
-      "Tinker was the first professional blockchain HFT firm and the largest trader in the industry. I lead the team from idea through to profitability, acquisition offers, and billions of dollars of trades.",
+      "Tinker was the first professional blockchain HFT firm and the largest trader in the industry. I led the team from idea through to profitability, acquisition offers, and billions of dollars of trades.",
     stack: ["Python", "Tensorflow", "Postgres", "RabbitMQ"],
     icon: <img alt="Tinker" src="/tinker.png" />,
     details: [
@@ -82,7 +82,7 @@ const data = [
         .
       </>,
       "Solved hard technical challenges to allow simultaneous high frequency trading on 20+ different venues, each with unpredictable response times and other API characteristics.",
-      "Lead a team of 3 full-time engineers + contractors for legal, accounting, and design.",
+      "Led a team of 3 full-time engineers + contractors for legal, accounting, and design.",
       "Turned hard compliance and regulatory challenges into strategic wins. Secured the only high-level partnership with a major Canadian bank in the industry, giving us access to high level financial services while competitors struggled to open chequing accounts.",
       "Designed successful risk mitigation strategies to security, counterparty, and asset price risks.",
       "Ran fundraising for our $2m seed round from YC, SVAngel and other prominent VCs.",
