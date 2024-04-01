@@ -1,6 +1,6 @@
 const navigation = [
   {
-    name: "GitHub",
+    name: "Linkedin",
     href: "#",
     icon: (props: any) => (
       <svg
