@@ -10,11 +10,9 @@ type ExperienceType = {
   time: string;
   details?: ReactNode[];
   stack?: string[];
-  key: number;
 };
 
 export default function Experience({
-  key,
   left,
   role,
   place,
@@ -26,7 +24,6 @@ export default function Experience({
   return (
     <div
       id={id || ""}
-      key={key}
       className={`${
         left ? "ml-auto mr-0" : null
       } rounded-lg border border-gray-200 bg-white p-6 shadow dark:border-gray-700 dark:bg-gray-800`}
@@ -42,9 +39,9 @@ export default function Experience({
       )}
       {stack && (
         <div className="mt-4 line-clamp-2 flex flex-wrap gap-x-2 gap-y-3">
-          {stack.map((tech) => (
+          {stack.map((tech, index) => (
             <span
-              key="1"
+              key={index}
               className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10"
             >
               {tech}
@@ -55,8 +52,8 @@ export default function Experience({
       {details && (
         <Collapse>
           <ul className="ml-4 list-disc space-y-3 pt-3">
-            {details.map((detail) => (
-              <li key="1">{detail}</li>
+            {details.map((detail, index) => (
+              <li key={index}>{detail}</li>
             ))}
           </ul>
         </Collapse>

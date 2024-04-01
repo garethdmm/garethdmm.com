@@ -10,7 +10,6 @@ import Experience from "@/app/components/Experience";
 
 const data = [
   {
-    key: 1,
     left: true,
     role: "Fractional CTO",
     place: "Various Startups",
@@ -41,7 +40,6 @@ const data = [
     },
   },
   {
-    key: 2,
     icon: <img alt="Truenorth" src="/truenorth.jpeg" />,
     left: false,
     role: "Payments Engineering Lead",
@@ -60,7 +58,6 @@ const data = [
   },
   {
     id: "tinker",
-    key: 3,
     left: true,
     place: "Tinker",
     role: "CEO/Engineer",
@@ -89,7 +86,6 @@ const data = [
     ],
   },
   {
-    key: 4,
     left: false,
     place: "Matinée & Other Startups",
     role: "Founder",
@@ -100,7 +96,6 @@ const data = [
     icon: <img alt="Matinee" src="/matinee.png" />,
   },
   {
-    key: 5,
     left: true,
     place: "Facebook",
     role: "Software Engineer",
@@ -111,7 +106,6 @@ const data = [
     icon: <img alt="Facebook" src="facebook.svg" />,
   },
   {
-    key: 6,
     left: false,
     place: "University of Waterloo",
     time: "2006 - 11",
@@ -130,9 +124,9 @@ export default function Career() {
           </h2>
         </div>
         <VerticalTimeline lineColor="#e2e8f0">
-          {data.map((experience) => (
+          {data.map((experience, index) => (
             <VerticalTimelineElement
-              key={experience.key}
+              key={index}
               className="vertical-timeline-element--work"
               date={experience.time}
               contentArrowStyle={{ display: "none" }}
