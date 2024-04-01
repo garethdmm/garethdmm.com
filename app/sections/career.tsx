@@ -30,7 +30,7 @@ const data = [
       "Tailwind",
       "NextJS",
     ],
-    icon: "🚀",
+    icon: <>🚀</>,
     iconStyle: {
       border: "2px solid gray",
       color: "#000",
