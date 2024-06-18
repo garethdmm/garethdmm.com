@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
-import { GoogleAnalytics } from '@next/third-parties/google'
 
 import "./globals.css";
+import { PHProvider } from './providers'
+import dynamic from 'next/dynamic'
+
+const PostHogPageView = dynamic(() => import('./PostHogPageView'), {
+  ssr: false,
+})
 
 export const metadata: Metadata = {
   title: "Gareth MacLeod",
@@ -15,9 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth bg-amber-50">
+      <PHProvider>
       <link rel="icon" type="image/png" href="/favicon.ico" />
-      <body>{children}</body>
-      <GoogleAnalytics gaId="G-LDRSXQJLG0" />
+      <body>
+        <PostHogPageView />
+        {children}
+        </body>
+      </PHProvider>
     </html>
   );
 }
