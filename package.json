@@ -21,6 +21,7 @@
     "@next/third-parties": "^14.1.4",
     "@prisma/client": "^5.16.1",
     "next": "13.4.8",
+    "next-mdx-remote": "^5.0.0",
     "posthog-js": "^1.139.3",
     "react": "^18",
     "react-dom": "^18",
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.13",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
