@@ -25,11 +25,11 @@ export default async function Post({ params }: { params: { id: string } }) {
         <div className="xl:relative">
           <div className="mx-auto max-w-2xl">
             <article>
-              <header className="flex flex-col">
-                <h1 className="mt-16 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+              <header className="flex flex-col mt-16 space-y-6">
+                <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
                   {article.title}
                 </h1>
-                <div className="pt-6 pb-12 text-lg flex flex-row gap-x-4 text-zinc-600">
+                <div className="text-lg flex flex-row gap-x-4 text-zinc-600">
                   <time dateTime={article.date.toDateString()}>
                     {formatDate(article.date)}
                   </time>
@@ -37,7 +37,7 @@ export default async function Post({ params }: { params: { id: string } }) {
                 </div>
                 <img src={"/" + article.cover} alt="stressed founder" />
               </header>
-              <div className="prose prose-xl mt-8" data-mdx-content>
+              <div className="prose prose-xl mt-16" data-mdx-content>
                 <MDXRemote source={article.content} />
               </div>
             </article>
