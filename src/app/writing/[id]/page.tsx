@@ -15,7 +15,7 @@ export default async function Post({ params }: { params: { id: string } }) {
     },
   });
 
-  if (!article || !article.content) {
+  if (!article) {
     return null;
   }
 

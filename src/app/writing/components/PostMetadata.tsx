@@ -3,10 +3,6 @@ import getReadingTime from "reading-time";
 import formatDate from "@/lib/format_date";
 
 export default function PostMetadata({ article }: { article: Post }) {
-  if (!article.date || !article.content) {
-    return null;
-  }
-
   const readTime = getReadingTime(article.content).text.replace(
     "min",
     "minute"

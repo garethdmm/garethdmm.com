@@ -6,10 +6,6 @@ import formatDate from "@/lib/format_date";
 import PostMetadata from "./components/PostMetadata";
 
 function Article({ article }: { article: Post }) {
-  if (!article.content) {
-    return null;
-  }
-
   return (
     <div className="relative isolate flex flex-col gap-8 lg:flex-row ">
       <div className="relative max-w-64 lg:shrink-0">
