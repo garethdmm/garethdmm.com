@@ -18,8 +18,11 @@ function Article({ article }: { article: Post }) {
           src={"/" + article.cover}
           alt="stressed founder"
         />
+        <a href={`/writing/${article.id}`}>
+          <div className="absolute inset-0"></div>
+        </a>
       </div>
-      <div className="flex flex-col gap-y-3">
+      <div className="flex flex-col gap-y-3 relative">
         <h3 className="text-2xl leading-6 text-gray-900 group-hover:text-gray-600">
           {article.title}
         </h3>
@@ -27,7 +30,8 @@ function Article({ article }: { article: Post }) {
         <div className="line-clamp-2 text-md leading-6 text-gray-600">
           <MDXRemote source={article.content} />
         </div>
-        <a href="#" className="underline">
+        <a href={`/writing/${article.id}`} className="underline">
+          <span className="absolute inset-0"></span>
           Read this
         </a>
       </div>
