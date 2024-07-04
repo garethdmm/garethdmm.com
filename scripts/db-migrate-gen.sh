@@ -2,6 +2,7 @@
 
 # Set the target directory
 migrations_dir="prisma/migrations"
+migration_title=$1
 
 # Function to extract the value of an environment variable from a .env file.
 get_env_var() {
@@ -36,15 +37,19 @@ get_next_migration_num() {
   echo "$new_dir"
 }
 
-# Set the target directory
-migrations_dir="prisma/migrations"
-
 SHADOW_DATABASE_URL=$(get_env_var "SHADOW_DATABASE_URL" ".env.local")
+
+next_migration_num=$(get_next_migration_num $migrations_dir)
+
+target_dir="${migrations_dir}/${next_migration_num}_${migration_title}"
+target_file="${target_dir}/migration.sql"
+
+mkdir $target_dir
 
 npx prisma migrate diff \
   --from-migrations=prisma/migrations \
   --to-schema-datamodel=prisma/schema.prisma \
   --shadow-database-url=${SHADOW_DATABASE_URL} \
-  --script > migration.sql
+  --script > ${target_file}
 
-
+echo $target_file
