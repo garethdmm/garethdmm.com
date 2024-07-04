@@ -3,9 +3,10 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 
 import { Container } from "@/components/Container";
 import formatDate from "@/lib/format_date";
+import PostMetadata from "./components/PostMetadata";
 
 function Article({ article }: { article: Post }) {
-  if (!article.date || !article.content) {
+  if (!article.content) {
     return null;
   }
 
@@ -22,12 +23,7 @@ function Article({ article }: { article: Post }) {
         <h3 className="text-2xl leading-6 text-gray-900 group-hover:text-gray-600">
           {article.title}
         </h3>
-        <div className="text-lg flex flex-row gap-x-4 text-zinc-600">
-          <time dateTime={article.date.toDateString()}>
-            {formatDate(article.date)}
-          </time>
-          |<span>8 minute read</span>
-        </div>
+        <PostMetadata article={article} />
         <div className="line-clamp-2 text-md leading-6 text-gray-600">
           <MDXRemote source={article.content} />
         </div>

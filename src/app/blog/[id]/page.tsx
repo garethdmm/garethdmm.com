@@ -2,7 +2,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { PrismaClient } from "@prisma/client";
 
 import { Container } from "@/components/Container";
-import formatDate from "@/lib/format_date";
+import PostMetadata from "../components/PostMetadata";
 
 export default async function Post({ params }: { params: { id: string } }) {
   const id = parseInt(params.id);
@@ -15,7 +15,7 @@ export default async function Post({ params }: { params: { id: string } }) {
     },
   });
 
-  if (!article || !article.content || !article.date) {
+  if (!article || !article.content) {
     return null;
   }
 
@@ -29,12 +29,7 @@ export default async function Post({ params }: { params: { id: string } }) {
                 <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
                   {article.title}
                 </h1>
-                <div className="text-lg flex flex-row gap-x-4 text-zinc-600">
-                  <time dateTime={article.date.toDateString()}>
-                    {formatDate(article.date)}
-                  </time>
-                  |<span>8 minute read</span>
-                </div>
+                <PostMetadata article={article} />
                 <img src={"/" + article.cover} alt="stressed founder" />
               </header>
               <div className="prose prose-xl mt-8 lg:mt-16" data-mdx-content>
