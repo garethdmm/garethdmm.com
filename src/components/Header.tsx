@@ -30,6 +30,7 @@ export default function Header() {
       >
         <a className="text-2xl" href="/">
           Gareth MacLeod
+          <span className="text-zinc-600 md:hidden"> / Writing </span>
         </a>
         <div className="flex lg:hidden">
           <Popover className="relative">
