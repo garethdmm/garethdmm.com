@@ -1,9 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { Dialog, DialogPanel } from "@headlessui/react";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon } from "@heroicons/react/24/outline";
 
 const links = [
   { href: `/`, text: "About" },
@@ -20,8 +18,6 @@ function NavLinks() {
 }
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
     <header>
       <nav
@@ -30,7 +26,7 @@ export default function Header() {
       >
         <a className="text-2xl" href="/">
           Gareth MacLeod
-          <span className="text-zinc-600 md:hidden"> / Writing </span>
+          <span className="text-zinc-600"> / Writing </span>
         </a>
         <div className="flex lg:hidden">
           <Popover className="relative">
