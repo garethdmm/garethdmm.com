@@ -4,7 +4,6 @@ import React from "react";
 
 import { editPost } from "../../actions";
 import { redirect } from "next/navigation";
-import BlogPageTemplate from "../../components/blog_template";
 import PostMetadata from "../../components/PostMetadata";
 
 const MarkdownEditorFormField = dynamic(
