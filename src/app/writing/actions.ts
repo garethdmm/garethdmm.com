@@ -1,10 +1,10 @@
+"use server";
+
 import { PrismaClient } from "@prisma/client";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 export async function createPost(formData: FormData) {
-  "use server";
-
   const postData = {
     content: formData.get("content") as string,
     title: formData.get("title") as string,
@@ -19,8 +19,6 @@ export async function createPost(formData: FormData) {
 }
 
 export async function deletePost(postId: number) {
-  "use server";
-
   const prisma = new PrismaClient();
 
   const result = await prisma.post.delete({
@@ -29,12 +27,10 @@ export async function deletePost(postId: number) {
     },
   });
 
-  revalidatePath("/blog");
+  revalidatePath("/writing");
 }
 
 export async function editPost(postId: number, formData: FormData) {
-  "use server";
-
   const postData = {
     content: formData.get("content") as string,
     title: formData.get("title") as string,

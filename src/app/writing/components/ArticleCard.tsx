@@ -2,15 +2,19 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { type Post } from "@prisma/client";
 
 import PostMetadata from "./PostMetadata";
+import ArticleMenu from "./ArticleMenu";
 
 export default function ArticleCard({ article }: { article: Post }) {
   return (
-    <div className="relative isolate flex flex-col gap-3 md:flex-row md:gap-8">
+    <div className="relative isolate flex flex-col gap-3 md:flex-row md:gap-8 group">
       <div className="flex flex-col gap-3 relative md:grow">
         <PostMetadata article={article} />
-        <h3 className="text-xl md:text-2xl leading-6 text-gray-900 group-hover:text-gray-600 md:order-first">
-          {article.title}
-        </h3>
+        <div className="md:order-first flex flex-row items-start">
+          <h3 className="text-xl md:text-2xl leading-6 text-gray-900 grow">
+            {article.title}
+          </h3>
+          <ArticleMenu article={article} />
+        </div>
         <div className="hidden md:block">
           <div className="line-clamp-2 text-base leading-6 text-gray-600">
             <MDXRemote source={article.content} />
@@ -20,7 +24,7 @@ export default function ArticleCard({ article }: { article: Post }) {
           href={`/writing/${article.id}`}
           className="underline hidden md:block"
         >
-          <span className="absolute inset-0"></span>
+          <span className="absolute inset-0 z-10"></span>
           Read this
         </a>
       </div>
