@@ -13,7 +13,9 @@ export default function ArticleCard({ article }: { article: Post }) {
           <h3 className="text-xl md:text-2xl leading-6 text-gray-900 grow">
             {article.title}
           </h3>
-          <ArticleMenu article={article} />
+          <div className="relative isolate z-20 invisible group-hover:visible">
+            <ArticleMenu article={article} />
+          </div>
         </div>
         <div className="hidden md:block">
           <div className="line-clamp-2 text-base leading-6 text-gray-600">

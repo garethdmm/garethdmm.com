@@ -8,12 +8,23 @@
 
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 
-import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
+import {
+  EllipsisHorizontalIcon,
+  EllipsisVerticalIcon,
+} from "@heroicons/react/24/outline";
 import { Post } from "@prisma/client";
 import { useCallback, useEffect, useState } from "react";
 import { deletePost } from "../actions";
 
-function MenuInner({ open, article }: { open: Boolean; article: Post }) {
+function MenuInner({
+  open,
+  article,
+  horizontal,
+}: {
+  open: Boolean;
+  article: Post;
+  horizontal?: Boolean;
+}) {
   const [confirmingDelete, setConfirmingDelete] = useState(false);
 
   useEffect(() => {
@@ -26,11 +37,18 @@ function MenuInner({ open, article }: { open: Boolean; article: Post }) {
 
   const onDeleteSubmit = deletePost.bind(null, article.id);
 
+  const Icon = (params: any) =>
+    horizontal ? (
+      <EllipsisHorizontalIcon {...params} />
+    ) : (
+      <EllipsisVerticalIcon {...params} />
+    );
+
   return (
     <>
       <PopoverButton>
         <span className="sr-only">Open post menu</span>
-        <EllipsisVerticalIcon className="h-8 w-8 shrink-0 z-50" />
+        <Icon className="h-8 w-8 shrink-0 z-50" />
       </PopoverButton>
       <PopoverPanel
         transition
@@ -68,15 +86,23 @@ function MenuInner({ open, article }: { open: Boolean; article: Post }) {
   );
 }
 
-export default function ArticleMenu({ article }: { article: Post }) {
+export default function ArticleMenu({
+  article,
+  horizontal,
+}: {
+  article: Post;
+  horizontal?: Boolean;
+}) {
   if (!article) {
     return null;
   }
 
   return (
-    <Popover className="relative isolate z-20 invisible group-hover:visible">
+    <Popover className="hidden md-block">
       {({ open }) => {
-        return <MenuInner open={open} article={article} />;
+        return (
+          <MenuInner open={open} article={article} horizontal={horizontal} />
+        );
       }}
     </Popover>
   );

@@ -2,6 +2,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { PrismaClient } from "@prisma/client";
 
 import PostMetadata from "../components/PostMetadata";
+import ArticleMenu from "../components/ArticleMenu";
 
 export default async function Post({ params }: { params: { id: string } }) {
   const id = parseInt(params.id);
@@ -25,7 +26,10 @@ export default async function Post({ params }: { params: { id: string } }) {
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
             {article.title}
           </h1>
-          <PostMetadata article={article} />
+          <div className="flex justify-between group">
+            <PostMetadata article={article} />
+            <ArticleMenu article={article} horizontal={true} />
+          </div>
           <img src={"/" + article.cover} alt="stressed founder" />
         </header>
         <div className="prose prose-xl mt-8 lg:mt-16" data-mdx-content>

@@ -28,6 +28,7 @@ export async function deletePost(postId: number) {
   });
 
   revalidatePath("/writing");
+  redirect('/writing');
 }
 
 export async function editPost(postId: number, formData: FormData) {
