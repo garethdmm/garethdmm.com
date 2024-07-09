@@ -35,10 +35,13 @@ export default function Header() {
         className="mx-auto flex items-center justify-between px-4 lg:px-8 py-4 border-b"
         aria-label="Global"
       >
-        <a className="text-2xl" href="/">
-          Gareth MacLeod
-          <span className="text-zinc-600"> / Writing </span>
-        </a>
+        <div className="text-2xl">
+          <a href="/">Gareth MacLeod</a>
+          <a href="/writing" className="text-zinc-600">
+            {" "}
+            / Writing
+          </a>
+        </div>
         <div className="flex lg:hidden">
           <Popover className="relative">
             <PopoverButton>
