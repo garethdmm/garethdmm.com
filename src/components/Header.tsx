@@ -1,7 +1,7 @@
 "use client";
 
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
-import { Bars3Icon } from "@heroicons/react/24/outline";
+import { Bars3Icon, PencilSquareIcon } from "@heroicons/react/24/outline";
 
 const links = [
   { href: `/`, text: "About" },
@@ -10,11 +10,22 @@ const links = [
 ];
 
 function NavLinks() {
-  return links.map((link, index) => (
-    <a key={index} href={link.href}>
-      {link.text}
-    </a>
-  ));
+  return (
+    <div className="hidden lg:flex">
+      <div className="mr-10 pr-10 border-r-2 text-zinc-600">
+        <a href="/writing/create">
+          <PencilSquareIcon className="h-6 w-6" />
+        </a>
+      </div>
+      <div className="flex gap-x-12">
+        {links.map((link, index) => (
+          <a key={index} href={link.href} className="">
+            {link.text}
+          </a>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default function Header() {
@@ -45,9 +56,7 @@ export default function Header() {
             </PopoverPanel>
           </Popover>
         </div>
-        <div className="hidden lg:flex gap-x-12">
-          <NavLinks />
-        </div>
+        <NavLinks />
       </nav>
     </header>
   );
