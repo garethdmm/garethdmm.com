@@ -49,7 +49,7 @@ export async function editPost(postId: number, formData: FormData) {
     },
   });
 
-  const previewUrl = `/blog/${postId}`
+  const previewUrl = `/writing/${postId}`
 
   redirect(previewUrl);
 }
