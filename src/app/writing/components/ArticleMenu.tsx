@@ -98,7 +98,7 @@ export default function ArticleMenu({
   }
 
   return (
-    <Popover className="hidden md-block">
+    <Popover className="hidden md:block">
       {({ open }) => {
         return (
           <MenuInner open={open} article={article} horizontal={horizontal} />
