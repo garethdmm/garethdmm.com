@@ -27,7 +27,13 @@ export default function CoverSelectInteractive({
         previewCover ? null : "aspect-square"
       )}
     >
-      <input type="text" name="cover" className="hidden" value={previewCover} />
+      <input
+        type="text"
+        name="cover"
+        className="hidden"
+        value={previewCover}
+        readOnly
+      />
       <Popover className="absolute top-4 right-4">
         <PopoverButton
           className="invisible group-hover:visible
