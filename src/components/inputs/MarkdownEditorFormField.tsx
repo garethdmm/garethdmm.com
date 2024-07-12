@@ -58,22 +58,23 @@ const MarkdownEditorFormField: FC<EditorProps> = ({
           toolbarPlugin({
             toolbarContents: () => {
               return (
-                <>
-                  <BoldItalicUnderlineToggles />
-                  <ListsToggle />
-                  <BlockTypeSelect />
-                  <InsertThematicBreak />
-                  <InsertImage />
-                  <CreateLink />
+                <div className="flex flex-row w-full justify-between">
+                  <div className="flex flex-row grow-1">
+                    <BoldItalicUnderlineToggles />
+                    <ListsToggle />
+                    <BlockTypeSelect />
+                    <InsertThematicBreak />
+                    <InsertImage />
+                    <CreateLink />
+                  </div>
                   <button
                     type="submit"
                     key="save"
-                    className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 mr-6"
+                    className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
                   >
                     Save
                   </button>
-                  ,
-                </>
+                </div>
               );
             },
           }),
