@@ -30,7 +30,7 @@ export default async function Post({ params }: { params: { id: string } }) {
             <PostMetadata article={article} />
             <ArticleMenu article={article} horizontal={true} />
           </div>
-          <img src={"/" + article.cover} alt="stressed founder" />
+          <img src={"/covers/" + article.cover} alt="stressed founder" />
         </header>
         <div className="prose prose-xl mt-8 lg:mt-16" data-mdx-content>
           <MDXRemote source={article.content} />
