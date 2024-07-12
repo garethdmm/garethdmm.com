@@ -1,6 +1,25 @@
 "use client";
 
-import { MDXEditor, MDXEditorMethods, headingsPlugin } from "@mdxeditor/editor";
+import {
+  BlockTypeSelect,
+  BoldItalicUnderlineToggles,
+  InsertThematicBreak,
+  ListsToggle,
+  MDXEditor,
+  MDXEditorMethods,
+  headingsPlugin,
+  listsPlugin,
+  toolbarPlugin,
+  thematicBreakPlugin,
+  quotePlugin,
+  imagePlugin,
+  InsertImage,
+  linkPlugin,
+  linkDialogPlugin,
+  CreateLink,
+} from "@mdxeditor/editor";
+import "@mdxeditor/editor/style.css";
+
 import { FC, useState } from "react";
 
 interface EditorProps {
@@ -22,18 +41,43 @@ const MarkdownEditorFormField: FC<EditorProps> = ({
 
   return (
     <>
-      <input
-        type="text"
-        name={name}
-        className="hidden"
-        value={currentMarkdown}
-      />
+      <textarea name={name} className="hidden" value={currentMarkdown} />
       <MDXEditor
         onChange={(val) => setMarkdown(val)}
         ref={editorRef}
-        markdown={markdown}
-        plugins={[headingsPlugin()]}
-        contentEditableClassName="prose prose-lg prose-gray font-serif"
+        markdown={currentMarkdown}
+        contentEditableClassName="prose prose-lg prose-gray font-serif [&>img]:mx-auto"
+        plugins={[
+          headingsPlugin(),
+          listsPlugin(),
+          thematicBreakPlugin(),
+          quotePlugin(),
+          imagePlugin(),
+          linkPlugin(),
+          linkDialogPlugin(),
+          toolbarPlugin({
+            toolbarContents: () => {
+              return (
+                <>
+                  <BoldItalicUnderlineToggles />
+                  <ListsToggle />
+                  <BlockTypeSelect />
+                  <InsertThematicBreak />
+                  <InsertImage />
+                  <CreateLink />
+                  <button
+                    type="submit"
+                    key="save"
+                    className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 mr-6"
+                  >
+                    Save
+                  </button>
+                  ,
+                </>
+              );
+            },
+          }),
+        ]}
       />
     </>
   );

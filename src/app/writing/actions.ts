@@ -35,7 +35,7 @@ export async function editPost(postId: number, formData: FormData) {
   const postData = {
     content: formData.get("content") as string,
     title: formData.get("title") as string,
-    cover: "",
+    cover: formData.get('cover') as string,
   };
 
   const prisma = new PrismaClient();
