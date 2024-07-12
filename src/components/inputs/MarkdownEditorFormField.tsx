@@ -47,6 +47,7 @@ const MarkdownEditorFormField: FC<EditorProps> = ({
         ref={editorRef}
         markdown={currentMarkdown}
         contentEditableClassName="prose prose-lg prose-gray font-serif [&>img]:mx-auto"
+        placeholder="Write your thoughts..."
         plugins={[
           headingsPlugin(),
           listsPlugin(),

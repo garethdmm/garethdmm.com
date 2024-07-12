@@ -10,7 +10,7 @@ import { Post } from "@prisma/client";
 import CoverSelectInteractive from "./CoverSelectInteractive";
 
 interface CoverSelectInputProps {
-  article: Post;
+  cover: string;
 }
 
 const imageExtensions = [
@@ -23,14 +23,12 @@ const imageExtensions = [
   ".webp",
 ];
 
-export default function CoverSelectInput({ article }: CoverSelectInputProps) {
+export default function CoverSelectInput({ cover }: CoverSelectInputProps) {
   const dirname = "./public/covers";
   const directoryContents = fs.readdirSync(dirname);
   const imageFilenames = directoryContents.filter((filename) =>
     imageExtensions.includes(path.extname(filename))
   );
 
-  return (
-    <CoverSelectInteractive article={article} filenames={imageFilenames} />
-  );
+  return <CoverSelectInteractive cover={cover} filenames={imageFilenames} />;
 }

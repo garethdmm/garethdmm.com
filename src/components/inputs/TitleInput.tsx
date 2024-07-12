@@ -1,15 +1,13 @@
 "use client";
 
-import { type Post } from "@prisma/client";
-
 import { useEffect, useRef } from "react";
 
 interface TitleInputProps {
-  article: Post;
+  title: string;
   className?: string;
 }
 
-export default function TitleInput({ article, className }: TitleInputProps) {
+export default function TitleInput({ title, className }: TitleInputProps) {
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
 
   const resetRows = () => {
@@ -26,11 +24,12 @@ export default function TitleInput({ article, className }: TitleInputProps) {
     <textarea
       name="title"
       className={className}
-      defaultValue={article.title}
+      defaultValue={title}
       autoFocus
       onChange={resetRows}
       ref={textAreaRef}
       rows={1}
+      placeholder="Your article's title"
     />
   );
 }

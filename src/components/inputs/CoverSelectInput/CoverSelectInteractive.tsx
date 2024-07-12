@@ -8,17 +8,15 @@ import { Post } from "@prisma/client";
 import { useEffect, useState } from "react";
 
 interface CoverSelectInteractiveProps {
-  article: Post;
+  cover: string;
   filenames: string[];
 }
 
 export default function CoverSelectInteractive({
-  article,
+  cover,
   filenames,
 }: CoverSelectInteractiveProps) {
-  const [previewCover, setPreviewCover] = useState<string | undefined>(
-    article.cover
-  );
+  const [previewCover, setPreviewCover] = useState<string | undefined>(cover);
 
   const removeCover = () => setPreviewCover(undefined);
   //

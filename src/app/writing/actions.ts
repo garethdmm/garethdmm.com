@@ -8,7 +8,7 @@ export async function createPost(formData: FormData) {
   const postData = {
     content: formData.get("content") as string,
     title: formData.get("title") as string,
-    cover: "",
+    cover: formData.get('cover') as string,
   };
 
   const prisma = new PrismaClient();
@@ -16,6 +16,9 @@ export async function createPost(formData: FormData) {
   const result = await prisma.post.create({
     data: { ...postData },
   });
+
+  revalidatePath('/writing');
+  redirect('/writing/' + result.id);
 }
 
 export async function deletePost(postId: number) {
