@@ -3,8 +3,7 @@ import { PrismaClient } from "@prisma/client";
 
 import PostMetadata from "../components/PostMetadata";
 import ArticleMenu from "../components/ArticleMenu";
-import { Container } from "@/components/Container";
-import ProseContainer from "@/components/ProseContainer";
+import { Container, ProseContainer } from "@/components/layout";
 
 export default async function Post({ params }: { params: { id: string } }) {
   const id = parseInt(params.id);

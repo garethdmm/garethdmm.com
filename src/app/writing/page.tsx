@@ -1,7 +1,7 @@
 import { PrismaClient, type Post } from "@prisma/client";
 
 import ArticleCard from "./components/ArticleCard";
-import { Container } from "@/components/Container";
+import { Container } from "@/components/layout";
 
 export default async function Writing() {
   const prisma = new PrismaClient();

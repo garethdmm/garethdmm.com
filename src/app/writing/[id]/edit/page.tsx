@@ -4,13 +4,15 @@ import React from "react";
 
 import { editPost } from "../../actions";
 import PostMetadata from "../../components/PostMetadata";
-import { ContainerInner, ContainerOuter } from "@/components/Container";
-import TitleInput from "@/components/TitleInput";
-import CoverSelectInput from "@/components/CoverSelectInput";
-import ProseContainer from "@/components/ProseContainer";
+import {
+  ContainerInner,
+  ContainerOuter,
+  ProseContainer,
+} from "@/components/layout";
+import { CoverSelectInput, TitleInput } from "@/components/inputs";
 
 const MarkdownEditorFormField = dynamic(
-  () => import("../../components/MarkdownEditorFormField"),
+  () => import("../../../../components/inputs/MarkdownEditorFormField"),
   { ssr: false }
 );
 

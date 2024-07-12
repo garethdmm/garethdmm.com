@@ -6,7 +6,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
-import Experience from "@/app/components/Experience";
+import Experience from "@/components/Experience";
 import { work_data } from "@/data/work_experience";
 
 export default function Career() {

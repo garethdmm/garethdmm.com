@@ -3,5 +3,5 @@ interface ProseContainerProps {
 }
 
 export default function ProseContainer({ children }: ProseContainerProps) {
-  return <div className="mx-auto max-w-2xl"></div>;
+  return <div className="mx-auto max-w-2xl">{children}</div>;
 }

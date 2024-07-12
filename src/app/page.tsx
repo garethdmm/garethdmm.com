@@ -1,8 +1,8 @@
-import Career from "./sections/career";
-import Writing from "./sections/writing";
-import Cover from "./sections/cover";
-import Footer from "./sections/footer";
-import Contact from "./sections/contact";
+import Career from "./components/career";
+import Writing from "./components/writing";
+import Cover from "./components/cover";
+import Contact from "./components/contact";
+import { Footer } from "@/components/layout";
 
 export default function Home() {
   return (
