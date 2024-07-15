@@ -13,7 +13,7 @@ import {
   EllipsisVerticalIcon,
 } from "@heroicons/react/24/outline";
 import { Post } from "@prisma/client";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { deletePost } from "../actions";
 
 function MenuInner({
