@@ -15,6 +15,14 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
+# Remove dev functionality for production.
+RUN rm -rf src/app/writing/create
+RUN rm -rf src/app/writing/\[id\]/edit
+RUN rm src/app/writing/actions.ts
+RUN mv src/app/writing/components/ArticleMenu/ProdArticleMenu.tsx src/app/writing/components/ArticleMenu/ArticleMenu.tsx
+
+RUN npx prisma generate
+
 ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN npm run build

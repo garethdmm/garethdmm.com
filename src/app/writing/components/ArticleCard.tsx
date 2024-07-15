@@ -1,10 +1,10 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { type Post } from "@prisma/client";
 
+import { type Post } from "@prisma/client";
 import PostMetadata from "./PostMetadata";
 import ArticleMenu from "./ArticleMenu";
 
-export default function ArticleCard({ article }: { article: Post }) {
+export default async function ArticleCard({ article }: { article: Post }) {
   return (
     <div className="relative isolate flex flex-col gap-3 md:flex-row md:gap-8 group">
       <div className="flex flex-col gap-3 relative md:grow">

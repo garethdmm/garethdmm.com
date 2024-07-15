@@ -12,11 +12,13 @@ const links = [
 function NavLinks() {
   return (
     <div className="hidden lg:flex">
-      <div className="mr-10 pr-10 border-r-2 text-zinc-600">
-        <a href="/writing/create">
-          <PencilSquareIcon className="h-6 w-6" />
-        </a>
-      </div>
+      {process.env.NODE_ENV === "development" && (
+        <div className="mr-10 pr-10 border-r-2 text-zinc-600">
+          <a href="/writing/create">
+            <PencilSquareIcon className="h-6 w-6" />
+          </a>
+        </div>
+      )}
       <div className="flex gap-x-12">
         {links.map((link, index) => (
           <a key={index} href={link.href} className="">

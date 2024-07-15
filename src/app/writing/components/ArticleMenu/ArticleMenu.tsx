@@ -7,24 +7,20 @@
 "use client";
 
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
-
 import {
   EllipsisHorizontalIcon,
   EllipsisVerticalIcon,
 } from "@heroicons/react/24/outline";
-import { Post } from "@prisma/client";
 import { useEffect, useState } from "react";
-import { deletePost } from "../actions";
 
-function MenuInner({
-  open,
-  article,
-  horizontal,
-}: {
-  open: Boolean;
-  article: Post;
-  horizontal?: Boolean;
-}) {
+import { deletePost } from "../../actions";
+import { ArticleMenuProps } from "./types";
+
+interface MenuInnerProps extends ArticleMenuProps {
+  open: boolean;
+}
+
+function MenuInner({ open, article, horizontal }: MenuInnerProps) {
   const [confirmingDelete, setConfirmingDelete] = useState(false);
 
   useEffect(() => {
@@ -86,13 +82,7 @@ function MenuInner({
   );
 }
 
-export default function ArticleMenu({
-  article,
-  horizontal,
-}: {
-  article: Post;
-  horizontal?: Boolean;
-}) {
+export default function ArticleMenu({ article, horizontal }: ArticleMenuProps) {
   if (!article) {
     return null;
   }
