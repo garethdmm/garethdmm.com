@@ -1,5 +1,7 @@
 import { Header, Footer } from "@/components/layout";
 
+export const dynamic = "force-dynamic";
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex flex-col w-full min-h-screen">
