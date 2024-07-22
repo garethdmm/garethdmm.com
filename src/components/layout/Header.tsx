@@ -34,7 +34,7 @@ export default function Header() {
   return (
     <header>
       <nav
-        className="mx-auto flex items-center justify-between px-4 lg:px-8 py-4 border-b"
+        className="mx-auto flex items-center justify-between px-4 lg:px-8 py-4 lg:py-8 max-w-7xl border-b lg:border-b-0"
         aria-label="Global"
       >
         <div className="text-2xl">
