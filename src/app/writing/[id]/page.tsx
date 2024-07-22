@@ -32,7 +32,11 @@ export default async function Post({ params }: { params: { id: string } }) {
               <PostMetadata article={article} />
               <ArticleMenu article={article} horizontal={true} />
             </div>
-            <img src={"/covers/" + article.cover} alt="stressed founder" />
+            <img
+              className="mx-auto"
+              src={"/covers/" + article.cover}
+              alt="stressed founder"
+            />
           </header>
           <div
             className="prose prose-xl mt-8 lg:mt-16 font-serif"
