@@ -1,7 +1,7 @@
 const navigation = [
   {
     name: "Linkedin",
-    href: "#",
+    href: "https://www.linkedin.com/in/garethmacleod/",
     icon: (props: any) => (
       <svg
         className="h-5 w-5 fill-current"
@@ -17,7 +17,7 @@ const navigation = [
   },
   {
     name: "GitHub",
-    href: "#",
+    href: "https://github.com/garethdmm",
     icon: (props: any) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
