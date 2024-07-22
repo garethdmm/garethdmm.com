@@ -12,7 +12,9 @@
     "lint": "next lint",
     "db:migrate:gen": "./scripts/db-migrate-gen.sh",
     "db:migrate:diff": "./scripts/db-migrate-diff.sh",
-    "db:migrate:up": "./scripts/db-migrate-up.sh"
+    "db:migrate:up": "./scripts/db-migrate-up.sh",
+    "db:reset": "source .env.local && DATABASE_URL=$DATABASE_URL prisma migrate reset",
+    "db:seed": "source .env.local && psql $DATABASE_URL -f seed.sql"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
