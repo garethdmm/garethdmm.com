@@ -43,8 +43,7 @@ export default function Cover() {
           </a>{" "}
           to learn more about me. You can also read some of my{" "}
           <a
-            href="https://garethdmm.medium.com/"
-            target="_blank"
+            href="/writing"
             className="cursor-pointer bg-pink-500 px-0.5 text-white"
           >
             writing
