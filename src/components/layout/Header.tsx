@@ -37,7 +37,7 @@ export default function Header() {
         className="mx-auto flex items-center justify-between px-4 lg:px-8 py-4 lg:py-8 max-w-7xl border-b lg:border-b-0"
         aria-label="Global"
       >
-        <div className="text-2xl">
+        <div className="text-xl sm:text-2xl">
           <a href="/">Gareth MacLeod</a>
           <a href="/writing" className="text-zinc-600">
             {" "}
