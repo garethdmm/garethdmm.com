@@ -45,7 +45,7 @@ export default function Header() {
           </a>
         </div>
         <div className="flex lg:hidden">
-          <Popover className="relative">
+          <Popover className="relative flex">
             <PopoverButton>
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
