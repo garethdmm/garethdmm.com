@@ -10,11 +10,8 @@ export default async function Writing() {
 
   return (
     <Container>
-      <header className="max-w-2xl mt-6 lg:mt-16 hidden md:block">
-        <h1 className="text-4xl sm:text-5xl">My Writing</h1>{" "}
-      </header>
-      <div className="mt-6 sm:mt-20 md:pl-6">
-        <div className="flex flex-col space-y-12">
+      <div className="mt-4 sm:mt-8">
+        <div className="flex flex-col space-y-4 sm:space-y-16">
           {articles.map((article: Post) => {
             return <ArticleCard key={article.id} article={article} />;
           })}
