@@ -10,8 +10,8 @@ export default async function Writing() {
 
   return (
     <Container>
-      <div className="mt-6 sm:mt-8">
-        <div className="flex flex-col space-y-12">
+      <div className="mt-4 sm:mt-8">
+        <div className="flex flex-col space-y-4 sm:space-y-16">
           {articles.map((article: Post) => {
             return <ArticleCard key={article.id} article={article} />;
           })}
