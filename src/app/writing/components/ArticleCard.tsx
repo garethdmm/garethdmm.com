@@ -33,7 +33,7 @@ export default async function ArticleCard({ article }: { article: Post }) {
       <div className="grid grid-cols-3 gap-3 md:order-first md:block md:shrink-0 relative">
         <div className="col-span-1 flex flex-col gap-y-3 shrink-0">
           <img
-            className="object-cover aspect-[4/3] md:w-64"
+            className="object-cover aspect-[4/3] md:w-64 border-2 rounded-sm"
             src={"/covers/" + article.cover}
             alt="stressed founder"
           />
