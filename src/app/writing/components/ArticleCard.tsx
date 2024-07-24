@@ -10,7 +10,7 @@ export default async function ArticleCard({ article }: { article: Post }) {
       <div className="flex flex-col gap-3 relative md:grow">
         <PostMetadata article={article} />
         <div className="md:order-first flex flex-row items-start">
-          <h3 className="text-xl md:text-2xl leading-6 text-gray-900 grow">
+          <h3 className="text-lg md:text-2xl leading-6 text-gray-900 grow">
             {article.title}
           </h3>
           <div className="relative isolate z-20 invisible group-hover:visible">
@@ -42,7 +42,11 @@ export default async function ArticleCard({ article }: { article: Post }) {
           </a>
         </div>
         <div className="col-span-2 md:hidden">
-          <div className="line-clamp-3 text-sm leading-6 text-gray-600">
+          {/**
+           * The complex selector here is a workaround for line-clamp in ios <= 16, wherein the property
+           * is applied to each child element directly, so we will end up with paragraphs*3 number of lines.
+           */}
+          <div className="line-clamp-3 text-xs leading-6 text-gray-600 [&>*]:hidden [&>*:first-child]:block">
             <MDXRemote source={article.content} />
           </div>
         </div>

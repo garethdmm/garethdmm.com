@@ -11,22 +11,22 @@ const links = [
 
 function NavLinks() {
   return (
-    <div className="hidden lg:flex">
+    <>
       {process.env.NODE_ENV === "development" && (
-        <div className="mr-10 pr-10 border-r-2 text-zinc-600">
+        <div className="mr-10 pr-10 border-r-2 text-zinc-600 hidden lg:block">
           <a href="/writing/create">
             <PencilSquareIcon className="h-6 w-6" />
           </a>
         </div>
       )}
-      <div className="flex gap-x-12">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
         {links.map((link, index) => (
           <a key={index} href={link.href} className="">
             {link.text}
           </a>
         ))}
       </div>
-    </div>
+    </>
   );
 }
 
@@ -37,7 +37,7 @@ export default function Header() {
         className="mx-auto flex items-center justify-between px-4 lg:px-8 py-4 lg:py-8 max-w-7xl border-b lg:border-b-0"
         aria-label="Global"
       >
-        <div className="text-2xl">
+        <div className="text-xl sm:text-2xl">
           <a href="/">Gareth MacLeod</a>
           <a href="/writing" className="text-zinc-600">
             {" "}
@@ -45,7 +45,7 @@ export default function Header() {
           </a>
         </div>
         <div className="flex lg:hidden">
-          <Popover className="relative">
+          <Popover className="relative flex">
             <PopoverButton>
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
@@ -61,7 +61,9 @@ export default function Header() {
             </PopoverPanel>
           </Popover>
         </div>
-        <NavLinks />
+        <div className="hidden lg:flex">
+          <NavLinks />
+        </div>
       </nav>
     </header>
   );
