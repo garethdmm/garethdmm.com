@@ -23,7 +23,7 @@ export default async function Post({ params }: { params: { id: string } }) {
   return (
     <Container>
       <ProseContainer>
-        <article className="mb-48">
+        <article className="mb-24 sm:mb-48">
           <header className="flex flex-col mt-6 lg:mt-24 space-y-6">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
               {article.title}
