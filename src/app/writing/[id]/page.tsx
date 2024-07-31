@@ -2,7 +2,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { PrismaClient } from "@prisma/client";
 
 import PostMetadata from "../components/PostMetadata";
-import { Container, ProseContainer } from "@/components/layout";
+import { Container, ProseContainer, WritingFooter } from "@/components/layout";
 import ArticleMenu from "../components/ArticleMenu";
 
 export default async function Post({ params }: { params: { id: string } }) {
@@ -23,7 +23,7 @@ export default async function Post({ params }: { params: { id: string } }) {
   return (
     <Container>
       <ProseContainer>
-        <article>
+        <article className="mb-48">
           <header className="flex flex-col mt-6 lg:mt-24 space-y-6">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
               {article.title}
@@ -57,6 +57,7 @@ export default async function Post({ params }: { params: { id: string } }) {
             </p>
           </div>
         </article>
+        <WritingFooter />
       </ProseContainer>
     </Container>
   );

@@ -5,7 +5,7 @@ export const writing_data = [
     href: "/writing/4",
     description:
       "I did something hard once: I took my startup from zero to $1m in daily volume in 4 months. Something has bothered me ever since: it felt easy.",
-    imageUrl: "/covers/ease_post.webp",
+    imageUrl: "/covers/ease.png",
     date: "Feb 16, 2024",
     datetime: "2024-02-16",
   },
